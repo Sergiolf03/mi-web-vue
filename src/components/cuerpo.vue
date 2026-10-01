@@ -1,22 +1,30 @@
 <script setup>
 import { ref } from 'vue'
-import { camisetas } from '../data/camisetas'
+import { camisetas, TALLAS } from '../data/camisetas'
+import detalle from './detalle.vue'
 
-const count = ref(0)
+const seleccionada = ref(null)
 const total = ref(0)
+
+function mostrarCamiseta(camiseta) {
+  seleccionada.value = camiseta
+}
 
 </script>
 <template>
-    <div>Total {{ total }} €</div>
-    <div class="modelos rejilla">
+    <Detalle v-if="seleccionada" :camiseta="seleccionada" :tallas="TALLAS" />
 
-        <article v-for="camiseta in camisetas" :key="camiseta.id" class="casilla">
-          <h2 class="nombre">{{ camiseta.nombre }}</h2>
-          <p class="foto"><img :src="camiseta.frente" alt="Camiseta de {{ camiseta.nombre }}" /></p>
-          <span class="precio">{{ camiseta.precio.toFixed(2) }} €</span>
-          <button type="button" class="counter anadir" @click="total += camiseta.precio">Detalle</button>
-        </article>
-    </div>
+    <template v-else>
+      <div>Total {{ total }} €</div>
+      <div class="modelos rejilla">
+          <article v-for="camiseta in camisetas" :key="camiseta.id" class="casilla">
+            <h2 class="nombre">{{ camiseta.nombre }}</h2>
+            <p class="foto"><img :src="camiseta.frente" alt="Camiseta de {{ camiseta.nombre }}" /></p>
+            <span class="precio">{{ camiseta.precio.toFixed(2) }} €</span>
+            <button type="button" class="counter anadir" @click="mostrarCamiseta(camiseta)">Detalle</button>
+          </article>
+      </div>
+    </template>
 </template>
 
 <style scoped>

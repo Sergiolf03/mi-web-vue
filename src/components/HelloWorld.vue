@@ -6,14 +6,6 @@ import vueLogo from '../assets/vue.svg'
 
 const count = ref(0)
 const precio = 10
-let camisetas = [
-  {
-    nombre: "stwd", precio: 15
-  },
-  {
-    nombre: "Nike", precio: 25
-  }
-]
 </script>
 
 <template>

@@ -6,15 +6,6 @@
 
 ## To Do
 
-#### Detalle
-<!-- id: task-1790768281911-26 -->
-Muestra una foto por delante y por detras, Ademas, se puede seleccionar la talla
-- [ ] Dibujar el detalle con foto, etc.
-- [ ] Emisiion evento: añadir al carrito
-- [ ] Captura de evento mostrarCamiseta
-- [ ] Reflejar la disponibilidad de camistas por talla
-<!-- workload: hard -->
-
 #### Carrito
 <!-- id: task-1790768715198-45 -->
 Tiene una lista de camisetas que vamos a comprar
@@ -26,6 +17,15 @@ Tiene una lista de camisetas que vamos a comprar
 <!-- assignee: Sergio -->
 
 ## In Progress
+
+#### Detalle
+<!-- id: task-1790768281911-26 -->
+Muestra una foto por delante y por detras, Ademas, se puede seleccionar la talla
+- [ ] Dibujar el detalle con foto, etc.
+- [ ] Emisiion evento: añadir al carrito
+- [ ] Captura de evento mostrarCamiseta
+- [ ] Reflejar la disponibilidad de camistas por talla
+<!-- workload: hard -->
 
 ## Done
 
